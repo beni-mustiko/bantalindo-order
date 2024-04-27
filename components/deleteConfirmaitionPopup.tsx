@@ -1,4 +1,12 @@
-function DeleteConfirmationPopup({ isOpen, onCancel, onDelete, id }) {
+function DeleteConfirmationPopup({
+  isOpen,
+  onCancel,
+  onDelete,
+}: {
+  isOpen: boolean;
+  onCancel: () => void;
+  onDelete: () => void;
+}) {
   if (!isOpen) return null;
 
   return (

@@ -40,9 +40,7 @@ export const EditButton = ({ id }: { id: string }) => {
 // };
 
 export const DeleteButton = ({ id }: { id: string }) => {
-  const [isOpens, setIsOpen] = useState(false);
-  const isOpen: any = isOpens;
-  const deleteContactWithId = deleteContact.bind(null, id);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleDeleteClick = () => {
     setIsOpen(true);
