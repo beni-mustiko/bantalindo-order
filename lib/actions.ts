@@ -37,7 +37,7 @@ export const saveContact = async (_prevState: any, params: FormData) => {
       return { message: `Failed to save contact to database: ${error}` };
     }
 
-    revalidatePath("/");
+    revalidatePath("/");  
     redirect("/");
   } else {
     return validation.error.errors;

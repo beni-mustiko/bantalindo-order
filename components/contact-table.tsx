@@ -1,6 +1,6 @@
 import { DeleteButton, EditButton } from "@/components/buttons";
 import { getContacts } from "@/lib/data";
-import { formatDate, isMoreThanTwoMinutes } from "@/lib/utils";
+import { formatDate, isMoreThanSevenDays } from "@/lib/utils";
 
 const ContactTable = async ({
   query,
@@ -35,7 +35,7 @@ const ContactTable = async ({
             },
             index: number
           ) => {
-            return isMoreThanTwoMinutes(
+            return isMoreThanSevenDays(
               formatDate(contact.createdAt.toString())
             ) ? (
               <tr
