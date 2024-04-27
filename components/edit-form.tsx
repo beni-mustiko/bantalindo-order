@@ -1,14 +1,12 @@
 "use client";
 import { SubmitButton } from "@/components/buttons";
-import { UpdateContact } from "@/lib/actions";
+import { saveContact, UpdateContact } from "@/lib/actions";
 import type { Contact } from "@prisma/client";
 import { useFormState } from "react-dom";
 
-const UpdateForm = ({ conact }: { conact: Contact }) => {
-  const updateContactWithId = UpdateContact.bind(null, conact.id);
-  const [s, formAction] = useFormState(saveContact, null);
-  const state :any=s;
-  // console.log(state);
+const UpdateForm = ({ contact }: { contact: Contact }) => {
+  const updateContactWithId = UpdateContact.bind(null, contact.id);
+  const [state, formAction] = useFormState(saveContact, null);
 
   return (
     <form action={formAction}>
@@ -22,7 +20,7 @@ const UpdateForm = ({ conact }: { conact: Contact }) => {
           id="name"
           placeholder="Full Name..."
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          defaultValue={conact.name}
+          defaultValue={contact.name}
         />
 
         <div id="name-error" aria-live="polite" aria-atomic="true">
@@ -48,7 +46,7 @@ const UpdateForm = ({ conact }: { conact: Contact }) => {
           id="phone"
           placeholder="Phone Number"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          defaultValue={conact.phone}
+          defaultValue={contact.phone}
         />
         <div id="phone-error" aria-live="polite" aria-atomic="true">
           {/* {state &&
@@ -73,7 +71,7 @@ const UpdateForm = ({ conact }: { conact: Contact }) => {
           id="order"
           placeholder="Order"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          defaultValue={conact.order}
+          defaultValue={contact.order}
         />
         <div id="phone-error" aria-live="polite" aria-atomic="true">
           {/* {state &&
