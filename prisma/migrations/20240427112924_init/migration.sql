@@ -1,6 +1,6 @@
 -- CreateTable
 CREATE TABLE "Contact" (
-    "id" TEXT NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "name" TEXT NOT NULL,
     "phone" TEXT NOT NULL,
     "order" TEXT NOT NULL,

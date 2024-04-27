@@ -4,9 +4,7 @@ import { saveContact } from "@/lib/actions";
 import { useFormState } from "react-dom";
 
 const CreateForm = () => {
-  const [s, formAction] = useFormState(saveContact, null);
-  const state: any = s;
-  // console.log(state);
+  const [state, formAction] = useFormState(saveContact, null);
 
   return (
     <form action={formAction}>
