@@ -23,7 +23,7 @@ const UpdateForm = ({ contact }: { contact: Contact }) => {
           defaultValue={contact.name}
         />
 
-        <div id="name-error" aria-live="polite" aria-atomic="true">
+        {/* <div id="name-error" aria-live="polite" aria-atomic="true">
           <div id="name-error" aria-live="polite" aria-atomic="true">
             {state &&
             state["0"]?.path["0"] === "name" &&
@@ -31,7 +31,7 @@ const UpdateForm = ({ contact }: { contact: Contact }) => {
               <p className="mt-3 text-sm text-red-500">{state["0"].message}</p>
             ) : null}
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="mb-5">
         <label
