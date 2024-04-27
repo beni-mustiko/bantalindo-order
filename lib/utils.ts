@@ -72,3 +72,45 @@ export const isMoreThanSevenDays = (createdDate: string) => {
 
   return isMoreThanSevenDays;
 };
+
+export const isMoreThanTwoMinutes = (createdDate: string) => {
+  // Parse the created date
+  var parts = createdDate.split(" ");
+  var day = parseInt(parts[0], 10);
+  var monthStr = parts[1];
+  var year = parseInt(parts[2], 10);
+
+  // Map month names to month numbers
+  var monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  var month = monthNames.indexOf(monthStr);
+
+  // Create a Date object with the created date
+  var createdDateObj = new Date(year, month, day);
+
+  // Get today's date
+  var today = new Date();
+
+  // Calculate the difference in milliseconds between today and the created date
+  var timeDiff = today.getTime() - createdDateObj.getTime();
+
+  // Calculate the difference in minutes
+  var minutesDiff = Math.floor(timeDiff / (1000 * 60));
+
+  // Check if the difference is more than 2 minutes
+  var isMoreThanTwoMinutes = minutesDiff > 2;
+
+  return isMoreThanTwoMinutes;
+};
