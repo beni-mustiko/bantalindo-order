@@ -11,7 +11,7 @@ const UpdateContactPage = async ({ params }: { params: { id: string } }) => {
   return (
     <div className="max-w-md mx-auto mt-5">
       <h1 className="text-2xl text-center mb-2">Ubah Order</h1>
-      <UpdateForm conact={contact} />
+      <UpdateForm contact={contact} />
     </div>
   );
 };
