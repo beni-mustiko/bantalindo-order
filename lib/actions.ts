@@ -19,7 +19,7 @@ export const saveContact = async (_prevState: any, params: FormData) => {
 
   if (validation.success) {
     try {
-      await prisma.contact.create({
+      await prisma?.contact.create({
         data: {
           name: validation.data.name,
           phone: validation.data.phone,
@@ -50,7 +50,7 @@ export const UpdateContact = async (
 
   if (validation.success) {
     try {
-      await prisma.contact.update({
+      await prisma?.contact.update({
         data: {
           name: validation.data.name,
           phone: validation.data.phone,
@@ -71,7 +71,7 @@ export const UpdateContact = async (
 
 export const deleteContact = async (id: string) => {
   try {
-    await prisma.contact.delete({
+    await prisma?.contact.delete({
       where: { id },
     });
   } catch (error) {
