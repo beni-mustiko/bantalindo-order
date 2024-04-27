@@ -48,13 +48,13 @@ const CreateForm = () => {
         />
 
         <div id="phone-error" aria-live="polite" aria-atomic="true">
-          {state &&
+          {/* {state &&
             state.length > 0 &&
             state.some((error) => error.path.includes("phone")) && (
               <p className="mb-5 text-sm text-red-500">
                 {state.find((error) => error.path.includes("phone")).message}
               </p>
-            )}
+            )} */}
         </div>
       </div>
       <div className="mb-5">
@@ -73,13 +73,13 @@ const CreateForm = () => {
         />
 
         <div id="phone-error" aria-live="polite" aria-atomic="true">
-          {state &&
+          {/* {state &&
             state.length > 0 &&
             state.some((error) => error.path.includes("order")) && (
               <p className="mb-5 text-sm text-red-500">
                 {state.find((error) => error.path.includes("order")).message}
               </p>
-            )}
+            )} */}
         </div>
       </div>
       <SubmitButton label="save" />
