@@ -26,7 +26,7 @@ const UpdateForm = ({ conact }: { conact: Contact }) => {
 
         <div id="name-error" aria-live="polite" aria-atomic="true">
           <div id="name-error" aria-live="polite" aria-atomic="true">
-            {(state && state['0']?.path?.['0'] === "name" && state['0']?.message) ? (
+            {(state && state['0']?.path['0'] === "name" && state['0']?.message) ? (
               <p className="mt-3 text-sm text-red-500">{state['0'].message}</p>
             ) : null}
           </div>
