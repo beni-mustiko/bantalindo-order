@@ -27,10 +27,11 @@ const ContactTable = async ({
         {contacts.map(
           (
             contact: {
-              createdAt: Date;
+              createdAt: { toString: () => String };
               id: string;
               name: string;
               phone: string;
+              order: string;
             },
             index: number
           ) => {
