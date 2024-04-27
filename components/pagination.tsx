@@ -62,7 +62,7 @@ const Pagination = ({ totalPages }: { totalPages: number }) => {
   }: {
     page: number | string;
     href: string;
-    position: "first" | "last" | "middle" | "single";
+    position?: "first" | "last" | "middle" | "single";
     isActive: boolean;
   }) => {
     const className = clsx(
