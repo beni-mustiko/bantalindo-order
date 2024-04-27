@@ -5,9 +5,7 @@ function DeleteConfirmationPopup({ isOpen, onCancel, onDelete, id }) {
     <div className="fixed inset-0 flex items-center justify-center z-[100]">
       <div className="absolute inset-0 bg-gray-900 opacity-50 "></div>
       <div className="relative bg-white p-10 rounded-lg shadow-lg">
-        <p className="text-lg mb-4">
-          Yakin ingin menghapus data dengan id {id}?
-        </p>
+        <p className="text-lg mb-4">Yakin ingin menghapus?</p>
         <div className="flex justify-center">
           <button
             onClick={onCancel}
