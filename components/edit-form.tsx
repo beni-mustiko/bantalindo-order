@@ -6,10 +6,8 @@ import { useFormState } from "react-dom";
 
 const UpdateForm = ({ conact }: { conact: Contact }) => {
   const updateContactWithId = UpdateContact.bind(null, conact.id);
-  const [state, formAction]: [any, any] = useFormState(
-    updateContactWithId,
-    null
-  );
+  const [s, formAction] = useFormState(saveContact, null);
+  const state :any=s;
   // console.log(state);
 
   return (
