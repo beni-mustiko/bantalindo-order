@@ -6,7 +6,10 @@ import { useFormState } from "react-dom";
 
 const UpdateForm = ({ conact }: { conact: Contact }) => {
   const updateContactWithId = UpdateContact.bind(null, conact.id);
-  const [state, formAction] = useFormState(updateContactWithId, null);
+  const [state, formAction]: [any, any] = useFormState(
+    updateContactWithId,
+    null
+  );
   // console.log(state);
 
   return (
@@ -26,8 +29,10 @@ const UpdateForm = ({ conact }: { conact: Contact }) => {
 
         <div id="name-error" aria-live="polite" aria-atomic="true">
           <div id="name-error" aria-live="polite" aria-atomic="true">
-            {(state && state['0']?.path['0'] === "name" && state['0']?.message) ? (
-              <p className="mt-3 text-sm text-red-500">{state['0'].message}</p>
+            {state &&
+            state["0"]?.path["0"] === "name" &&
+            state["0"]?.message ? (
+              <p className="mt-3 text-sm text-red-500">{state["0"].message}</p>
             ) : null}
           </div>
         </div>
