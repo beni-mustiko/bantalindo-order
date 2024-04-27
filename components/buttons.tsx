@@ -67,7 +67,6 @@ export const DeleteButton = ({ id }: { id: string }) => {
         isOpen={isOpen}
         onCancel={handleCancel}
         onDelete={handleDeleteConfirm}
-        id={id}
       />
     </div>
   );
